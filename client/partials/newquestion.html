@@ -1,0 +1,11 @@
+<a href="/#!/dashboard">Home</a> | <a style="color: blue; text-decoration: underline;" ng-click="logout()">Logout</a>
+
+<p style="color:red;">{{messages.message}}</p>
+
+<h2>New Question</h2>
+<form ng-submit="create()">
+    Question: <input type="text" ng-model='newQuestion.question'><br>
+    Description (optional): <input type="text" ng-model='newQuestion.description'><br>
+    <input type="submit" value='Submit'><br>
+</form>
+<button ng-click="goback()">Cancel</button>

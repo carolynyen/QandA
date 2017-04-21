@@ -1,0 +1,13 @@
+<a href="/#!/dashboard">Home</a> | <a style="color: blue; text-decoration: underline;" ng-click="backtoquestion()">Go Back to Question</a> | <a style="color: blue; text-decoration: underline;" ng-click="logout()">Logout</a>
+
+<p style="color:red;">{{messages.message}}</p>
+
+<h1>{{question.question}}</h1>
+<h3>{{question.description}}</h3>
+
+<form ng-submit="create()">
+    Your Answer: <input type="text" ng-model='newAnswer.text'><br>
+    Supporting details for your answer (optional): <input type="text" ng-model='newAnswer.details'><br>
+    <input type="submit" value='Submit'>
+</form>
+<button ng-click="goback()">Cancel</button>

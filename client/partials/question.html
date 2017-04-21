@@ -1,0 +1,12 @@
+<a href="/#!/dashboard">Home</a> | <a style="color: blue; text-decoration: underline;" ng-click="answer()">Answer this Question</a> | <a style="color: blue; text-decoration: underline;" ng-click="logout()">Logout</a>
+
+<h1>{{question.question}}</h1>
+<h3>{{question.description}}</h3>
+
+<p style="color: red;">{{messages.message}}</p>
+
+<div ng-repeat="answer in answers | orderBy: '-likes'">
+    <hr>
+    <h4><span ng-bind="answer._user.name"></span> answers: "<span ng-bind="answer.text"></span>"   <button ng-click="like(answer._id)">Like!</button> {{answer.likes}} likes</h4>
+    <h5><span ng-bind="answer.details"></span></h5>
+</div>
